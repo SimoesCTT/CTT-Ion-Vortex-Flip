@@ -21,6 +21,13 @@ In 2026, the industry relies on **Target Row Refresh (TRR)** to stop Rowhammer. 
 ## 🚀 Impact: Total Hardware Sovereignty
 * **Hypervisor Escape:** Flip bits in the nested pointers of a VM exit to gain host-level control.
 * **Encryption Zeroing:** Target RSA-4096 private keys in memory to induce a "Fault Attack," leaking the key.
+
+
+# Compile with math library
+gcc -o ctt_rowhammer ctt_rowhammer.c -lm -O2 -Wall
+
+# Run (requires root for memory operations)
+sudo ./ctt_rowhammer
 * **Unpatchable:** This is an architectural bypass of silicon logic. You cannot update your way out of physics.
 
 ## 📡 Global Tracking
